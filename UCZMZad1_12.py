@@ -20,5 +20,6 @@ with open('out0.csv', 'w') as out0:
 # 2
 df['Cena za m2'] = round((df['Cena'] * 1000 / df['Powierzchnia']), 2)
 
-df2 = df[(df['Liczba pokoi'] >= 3) & (df['Cena za m2'] < df['Cena za m2'].mean())]
+df2 = df[(df['Liczba pokoi'] >= 3) &
+         (df['Cena za m2'] < df['Cena za m2'].mean())]
 df2.to_csv('out1.csv', columns=['Liczba pokoi', 'Cena', 'Cena za m2'])

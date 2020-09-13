@@ -17,4 +17,4 @@ df1 = df.merge(description, how='left', left_on='Piętro', right_on='liczba')
 # and fill NaN as empty string
 df1.drop(['liczba'], axis=1, inplace=True)
 df1.fillna('', inplace=True)
-df1.to_csv('out2.csv', index = False)
+df1.to_csv('out2.csv', index=False)
